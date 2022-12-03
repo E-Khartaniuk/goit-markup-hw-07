@@ -42,7 +42,16 @@
     }
 }
 
+.portfolio__item {
+    &:hover .portfolio__overlay {
+        transform: translateY(0%);
+    }
 
+    &:focus .portfolio__overlay {
+        transform: translateY(0%);
+    }
+
+}
 
 /* оверлей анімація */
 
@@ -75,16 +84,7 @@
 }
 
 
-.portfolio__card {
-&:hover .portfolio__overlay {
-    transform: translateY(0%);
-}
 
-&:focus .portfolio__overlay {
-    transform: translateY(0%);
-}
-
-}
 
 .portfolio__list {
     display: flex;

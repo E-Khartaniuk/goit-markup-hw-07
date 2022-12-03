@@ -1,100 +1,6 @@
-.box {
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio-overlay {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(33, 150, 243, 0.9);
-
-    transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.box-text {
-    font-size: 18px;
-    line-height: 1.56;
-
-    letter-spacing: 0.03em;
-
-    margin: auto 24px;
-    color: var(--text-color-white);
-}
-
-.portfolio-card:hover .portfolio-overlay {
-    transform: translateY(0%);
-}
-
-.portfolio-card:focus .portfolio-overlay {
-    transform: translateY(0%);
-}
-
-.portfolio-list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.portfolio-item {
-    display: block;
-    text-decoration: none;
-
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
-}
-
-.portfolio-item:hover,
-.portfolio-item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.portfolio-item img {
-    display: block;
-}
-
-.portfolio-item-border {
-    border-left: 1px solid #eeeeee;
-    border-right: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 24px;
-    padding-right: 24px;
-}
-
-.project {
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    color: var(--primary-text-color);
-    margin-bottom: 4px;
-    /* padding-top: 20px;
-  margin-right: 24px;
-  margin-left: 24px; */
-}
-
-.project-type {
-    font-size: 16px;
-    line-height: 1.875;
-    letter-spacing: 0.03em;
-    color: var(--secondary-text-color);
-    /* margin-right: 24px;
-  margin-left: 24px;
-  margin-bottom: 24px; */
-}
-
-
 
 /* Backdrop */
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -117,9 +23,7 @@
 .modal {
     position: absolute;
     width: 528px;
-    /* height: 581px; */
 
-    /* padding: 40px; */
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 40px;
@@ -136,7 +40,7 @@
     border-radius: 4px;
 }
 
-.modal-title {
+.modal__title {
     margin-bottom: 12px;
 
     font-size: 20px;
@@ -149,7 +53,7 @@
     transform: translate(-50%, -50%) scale(1.2) translateY(20%);
 }
 
-.modal-label {
+.modal__label {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.1666;
@@ -159,7 +63,7 @@
     color: var(--secondary-text-color);
 }
 
-.modal-input {
+.modal__input {
     width: 100%;
     height: 40px;
     outline: transparent;
@@ -169,13 +73,20 @@
 
     padding-left: 42px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:focus {
+        border: 1px solid var(--accent-color);
+    }
+
+&:focus+.modal__icon {
+            fill: var(--accent-color);
+        }
 }
 
-.modal-input:focus {
-    border: 1px solid var(--accent-color);
-}
 
-.modal-icon {
+
+
+.modal__icon {
     position: absolute;
     left: 15px;
     top: 50%;
@@ -187,17 +98,15 @@
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:focus+.modal-icon {
-    fill: var(--accent-color);
-}
 
-.input-wraper {
+
+.modal__wraper {
     position: relative;
     margin-bottom: 10px;
     margin-top: 4px;
 }
 
-.coment {
+.modal__coment {
     width: 100%;
     height: 120px;
     background-color: transparent;
@@ -211,22 +120,24 @@
     letter-spacing: 0.01em;
     color: var(--secondary-text-color);
     padding: 12px 16px;
-
     margin-top: 4px;
-
     resize: none;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+    }
+
+    &:focus {
+        border: 1px solid var(--accent-color);
+    }
 }
 
-.coment::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-}
 
-.coment:focus {
-    border: 1px solid var(--accent-color);
-}
+// Чек Бокс
 
-.check-text {
+
+.modal__check-text {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -239,14 +150,14 @@
     justify-content: center;
 }
 
-.confirm {
+.modal__confirm {
     color: var(--accent-color);
     text-decoration: underline;
     display: inline-block;
     margin-left: 5px;
 }
 
-.check-text span {
+.modal__check-confirm {
     display: inline-block;
     width: 16px;
     height: 15px;
@@ -260,25 +171,28 @@
 
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:hover {
+        cursor: pointer;
+    }
 }
 
-.check-text span:hover {
-    cursor: pointer;
-}
-
-.icon-check {
+.modal__icon-check {
     width: 16px;
     height: 15px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-check:checked+.check-text span {
+.modal__check:checked + .modal__check-text .modal__check-confirm {
     background-color: var(--accent-color);
     border: 2px solid transparent;
     fill: var(--text-color-white);
 }
 
-.modal-button {
+
+// Сабміт баттон
+
+.modal__button {
     width: 200px;
     height: 50px;
     font-weight: 700;
@@ -301,18 +215,21 @@
     margin-right: auto;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+&:focus,
+&:hover {
+        background-color: #188ce8;
+    }
 }
 
-.modal-button:focus,
-.modal-button:hover {
-    background-color: #188ce8;
-}
 
-.modal-close {
+
+.modal__close {
     position: absolute;
     top: 8px;
     right: 8px;
-    /* transform: translate(-50%, -50%); */
+
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -320,9 +237,10 @@
     background: var(--text-color-white);
     cursor: pointer;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-close:focus,
-.modal-close:hover {
+&:focus,
+&:hover {
     fill: var(--accent-color);
 }
+}
+
