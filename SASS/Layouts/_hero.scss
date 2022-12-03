@@ -1,0 +1,64 @@
+.hero {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-size: 1600px;
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.hero__title {
+    font-size: 44px;
+    line-height: 1.3636;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-color-white);
+
+    margin-bottom: 30px;
+    width: 696px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* кнопка */
+
+.hero__button {
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    color: var(--text-color-white);
+    background: var(--accent-color);
+    display: inline-block;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    min-width: 216px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0ms;
+    transition-duration: 250ms;
+}
+
+.hero__button:focus,
+.hero__button:hover {
+    background-color: var(--button-background);
+}
