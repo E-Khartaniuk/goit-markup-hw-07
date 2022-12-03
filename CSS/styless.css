@@ -589,9 +589,9 @@ ul {
   color: var(--text-color-white);
 }
 
-.clients-logo {
+/* .clients-logo {
   fill: currentColor;
-}
+} */
 
 .footer-flex {
   display: flex;
@@ -847,13 +847,9 @@ ul {
   margin-bottom: 24px; */
 }
 
-.adress-bg {
-  background: var(--dark-background-color);
-}
-
-.footer-list {
+/* .footer-list {
   margin-bottom: 0;
-}
+} */
 
 /* Backdrop */
 .backdrop {

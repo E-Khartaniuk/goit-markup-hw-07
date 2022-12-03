@@ -28,7 +28,9 @@
         <nav>
           <ul class="header__nav">
             <li><a href="index.html" class="header__link">Студія</a></li>
-            <li><a href="portfolio.html" class="current">Портфоліо</a></li>
+            <li>
+              <a href="portfolio.html" class="header__current">Портфоліо</a>
+            </li>
             <li><a href="/contacts" class="header__link">Контакти</a></li>
           </ul>
         </nav>
@@ -105,7 +107,7 @@
                 </div>
                 <div class="portfolio__item-border">
                   <h2 class="project">Технокряк</h2>
-                  <p class="project__type">Веб-сайт</p>
+                  <p class="portfolio__project-type">Веб-сайт</p>
                 </div>
               </a>
             </li>
@@ -316,28 +318,28 @@
       </section>
     </main>
 
-    <footer class="adress-bg">
-      <div class="container footer-flex">
+    <footer class="footer">
+      <div class="container footer__flex">
         <div>
-          <a href="index.html" class="footer-logo"
-            ><span class="logo-color">Web</span>Studio</a
+          <a href="index.html" class="footer__logo"
+            ><span class="footer__logo-color">Web</span>Studio</a
           >
           <address>
-            <ul class="footer-list">
-              <li class="footer-item">
+            <ul class="footer__contact-list">
+              <li class="footer__list-item">
                 <a
                   href="https://goo.gl/maps/7Db7DbjJBNrfCCmd9"
-                  class="footer-address"
+                  class="footer__address"
                   >м. Київ, пр-т Лесі Українки, 26</a
                 >
               </li>
-              <li class="footer-item">
-                <a href="tel:+380961111111" class="footer-contacts"
+              <li class="footer__list-item">
+                <a href="tel:+380961111111" class="footer__contacts"
                   >+38 096 111 11 11</a
                 >
               </li>
-              <li class="footer-item">
-                <a href="mailto:info@devstudio.com" class="footer-contacts"
+              <li class="footer__list-item">
+                <a href="mailto:info@devstudio.com" class="footer__contacts"
                   >info@devstudio.com</a
                 >
               </li>
@@ -345,33 +347,33 @@
           </address>
         </div>
 
-        <div class="footer-soc-links">
-          <h3 class="footer-soc-title">приєднуйтесь</h3>
-          <ul class="footer-inks-list">
-            <li>
-              <a href="" class="footer-soc-link">
+        <div class="footer__soc-links">
+          <h3 class="footer__soc-title">приєднуйтесь</h3>
+          <ul class="footer__links-list">
+            <li class="footer__soc-list-item">
+              <a href="" class="footer__soc-link">
                 <svg width="20" height="20">
                   <use href="./images/symbol-defs.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li>
-              <a href="" class="footer-soc-link">
+            <li class="footer__soc-list-item">
+              <a href="" class="footer__soc-link">
                 <svg width="20" height="20">
                   <use href="./images/symbol-defs.svg#icon-tviter"></use>
                 </svg>
               </a>
             </li>
 
-            <li>
-              <a href="" class="footer-soc-link">
+            <li class="footer__soc-list-item">
+              <a href="" class="footer__soc-link">
                 <svg width="20" height="20">
                   <use href="./images/symbol-defs.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li>
-              <a href="" class="footer-soc-link">
+            <li class="footer__soc-list-item">
+              <a href="" class="footer__soc-link">
                 <svg width="20" height="20">
                   <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                 </svg>
@@ -380,23 +382,23 @@
           </ul>
         </div>
 
-        <div class="footer-form-wrap">
-          <form action="" class="footer-form"></form>
+        <div class="footer__form-wrap">
+          <form class="footer__form"></form>
 
-          <label for="footer-mail" class="footer-email"
+          <label for="footer-mail" class="footer__email"
             >Підпишіться на розсилку</label
           >
-          <div class="input-wrap">
+          <div class="input__wrap">
             <input
               name="email"
               type="text"
               id="footer-mail"
               placeholder="E-mail"
-              class="footer-input"
+              class="footer__input"
             />
-            <button type="submit" class="footer-sub-btn">
+            <button type="submit" class="footer__sub-btn">
               Підписатися
-              <svg width="24" height="24" class="icon-plane">
+              <svg width="24" height="24" class="footer__icon-plane">
                 <use href="./images/symbol-defs.svg#icon-plane"></use>
               </svg>
             </button>
